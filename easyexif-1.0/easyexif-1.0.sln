@@ -7,6 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_thirdparty", "0_thirdpart
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libeasyexif", "thirdparty\easyexif-1.0\libeasyexif.vcxproj", "{A78DCBC4-077B-4884-A7F4-D9AF70EDB538}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_demo", "1_demo", "{BDF524B5-29BC-4A2C-9DEF-0B709EC26DAA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demo", "demo\demo\demo.vcxproj", "{3CFD8D3C-5D69-47BF-9E96-BCD6AC473C8C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A78DCBC4-077B-4884-A7F4-D9AF70EDB538} = {A78DCBC4-077B-4884-A7F4-D9AF70EDB538}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -17,12 +24,17 @@ Global
 		{A78DCBC4-077B-4884-A7F4-D9AF70EDB538}.Debug|x64.Build.0 = Debug|x64
 		{A78DCBC4-077B-4884-A7F4-D9AF70EDB538}.Release|x64.ActiveCfg = Release|x64
 		{A78DCBC4-077B-4884-A7F4-D9AF70EDB538}.Release|x64.Build.0 = Release|x64
+		{3CFD8D3C-5D69-47BF-9E96-BCD6AC473C8C}.Debug|x64.ActiveCfg = Debug|x64
+		{3CFD8D3C-5D69-47BF-9E96-BCD6AC473C8C}.Debug|x64.Build.0 = Debug|x64
+		{3CFD8D3C-5D69-47BF-9E96-BCD6AC473C8C}.Release|x64.ActiveCfg = Release|x64
+		{3CFD8D3C-5D69-47BF-9E96-BCD6AC473C8C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A78DCBC4-077B-4884-A7F4-D9AF70EDB538} = {3ABC21F0-C30C-4A76-997D-142F91B49EF9}
+		{3CFD8D3C-5D69-47BF-9E96-BCD6AC473C8C} = {BDF524B5-29BC-4A2C-9DEF-0B709EC26DAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A8CEE52-492A-4393-9DD8-1A14948800DE}

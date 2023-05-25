@@ -890,3 +890,29 @@ void easyexif::EXIFInfo::clear() {
   LensInfo.Make = "";
   LensInfo.Model = "";
 }
+
+
+
+bool GetPicInfo(const char* szFilePath, easyexif::EXIFInfo& result)
+{
+	bool bReturn = false;
+	FILE *fp = fopen(szFilePath, "rb");
+	if (fp != NULL) 
+	{
+		fseek(fp, 0, SEEK_END);
+		unsigned long fsize = ftell(fp);
+		rewind(fp);
+		unsigned char *buf = new unsigned char[fsize];
+		if (fread(buf, 1, fsize, fp) == fsize) 
+		{
+			bool bRes = result.parseFrom(buf, fsize);		
+			if (PARSE_EXIF_SUCCESS == bRes)
+			{
+				bReturn = true;
+			}
+		}
+		fclose(fp);	
+		delete[] buf;
+	}
+	return bReturn;
+}

@@ -160,4 +160,8 @@ class EXIFInfo {
 // EXIF header was found, but data was corrupted.
 #define PARSE_EXIF_ERROR_CORRUPT              1985
 
+
+bool GetPicInfo(const char* szFilePath, easyexif::EXIFInfo& result);
+
+
 #endif
